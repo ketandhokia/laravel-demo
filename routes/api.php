@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/screen1', 'App\Http\Controllers\AnimalController@screen1');
+Route::get('/screen2', function () {
+    return 'This is Screen 2';
+});
+Route::get('/screen3', function () {
+    return 'This is Screen 3';
+});
